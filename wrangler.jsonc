@@ -1,0 +1,21 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "geocode",
+	"account_id": "c0912e10eadeaa117b0067ab29b55da6",
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	// Build before any deploy/upload so CI doesn't need a separate build command.
+	"build": {
+		"command": "pnpm run build"
+	},
+	"compatibility_date": "2026-09-04",
+	// SvelteKit's server runtime relies on AsyncLocalStorage.
+	"compatibility_flags": ["nodejs_als"],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	"observability": {
+		"enabled": true
+	},
+ "vars": {}
+}

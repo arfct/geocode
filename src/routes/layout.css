@@ -1,0 +1,179 @@
+:root {
+	--bg: #0b0b0c;
+	--text: #d6d6d3;
+	--muted: #6f6f6c;
+	--dim: #3a3a39;
+	--accent: #ffffff;
+	--mono: 'Geist Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+	color-scheme: dark;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font: 12px / 1.7 var(--mono);
+	-webkit-font-smoothing: antialiased;
+	font-variant-numeric: tabular-nums;
+}
+
+a {
+	color: var(--text);
+	text-decoration: none;
+	border-bottom: 1px solid var(--dim);
+	transition:
+		color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+a:hover {
+	color: var(--accent);
+	border-color: var(--muted);
+}
+
+::selection {
+	background: #2a2a2b;
+	color: var(--accent);
+}
+
+input[type='text'] {
+	width: 100%;
+	padding: 0;
+	font: inherit;
+	color: var(--accent);
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid var(--dim);
+	border-radius: 0;
+	outline: none;
+	caret-color: var(--accent);
+}
+
+input[type='text']:focus {
+	border-color: var(--muted);
+}
+
+input::placeholder {
+	color: var(--dim);
+}
+
+button.link {
+	font: inherit;
+	color: var(--text);
+	background: none;
+	border: 0;
+	border-bottom: 1px solid var(--dim);
+	padding: 0;
+	cursor: pointer;
+	transition:
+		color 0.15s ease,
+		border-color 0.15s ease;
+}
+
+button.link:hover {
+	color: var(--accent);
+	border-color: var(--muted);
+}
+
+button.link.active,
+a.active {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+.muted {
+	color: var(--muted);
+}
+
+/* Legacy converter page */
+.page {
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 3rem 1.25rem 5rem;
+}
+
+.masthead {
+	display: flex;
+	gap: 1rem;
+	margin-bottom: 2.5rem;
+}
+
+.masthead p {
+	margin: 0;
+	color: var(--muted);
+}
+
+h1 {
+	font-size: 1rem;
+	font-weight: 500;
+	margin: 0 0 0.5rem;
+}
+
+.lede {
+	color: var(--muted);
+	margin: 0 0 2rem;
+}
+
+label {
+	display: block;
+	color: var(--muted);
+	margin-bottom: 0.4rem;
+}
+
+.examples {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin: 0.75rem 0 2rem;
+}
+
+.examples button {
+	font: inherit;
+	color: var(--muted);
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid var(--dim);
+	padding: 0;
+	cursor: pointer;
+}
+
+.examples button:hover {
+	color: var(--accent);
+}
+
+.results div {
+	display: grid;
+	grid-template-columns: 14rem 1fr;
+	gap: 1rem;
+	padding: 0.3rem 0;
+}
+
+.results dt,
+.results dd {
+	margin: 0;
+}
+
+.results dt {
+	color: var(--muted);
+}
+
+.hint {
+	color: var(--muted);
+}
+
+@media (max-width: 34rem) {
+	.results div {
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+}
