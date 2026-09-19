@@ -1,5 +1,8 @@
 allowBuilds:
-  esbuild: set this to true or false
-  workerd: set this to true or false
-onlyBuiltDependencies:
-  - esbuild
+  esbuild: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - eslint@10.11.0
+  - miniflare@5.20260918.0-alpha
+  - svelte@5.57.1
+  - wrangler@4.135.0
