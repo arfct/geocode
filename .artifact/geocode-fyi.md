@@ -1,6 +1,7 @@
 ---
 title: geocode.fyi
 date: 2026-09
+status: released
 category: tool
 tags:
   - web
@@ -16,9 +17,7 @@ media:
     alt: A black page headed Coordinate converter, with a text field holding 37.7749, -122.4194, four example coordinates beneath it, and a table of four rows giving the same position in four notations
 credits:
   - liquidx
-unconfirmed:
-  - date
-  - credits
+unconfirmed: [date, credits, status]
 ---
 
 Hemisphere letters count for more than order on geocode.fyi, so a coordinate pair typed as "122W, 37N" is read as the same place as "37N, 122W". The site reads a latitude and longitude in decimal degrees, in degrees, minutes and seconds, or in degrees and decimal minutes, and a separate page converts a pair between the three.
