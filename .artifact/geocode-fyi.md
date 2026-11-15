@@ -2,7 +2,7 @@
 title: geocode.fyi
 date: 2026-09
 status: released
-category: tool
+category: web-tool
 tags:
   - web
 url: https://geocode.fyi
